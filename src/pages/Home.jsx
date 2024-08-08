@@ -1,6 +1,11 @@
-import { CheckCards } from "../components/CheckCards";
-import { Header } from "../components/Header";
-import { StudioCards } from "../components/StudioCards";
+
+import { CheckCards } from "../components/panels/CheckCards";
+import { Header } from "../components/panels/Header";
+import { PricingChart } from "../components/panels/Pricing";
+import { ReviewsPanel } from "../components/panels/Reviews";
+import { ServiceCards } from "../components/panels/ServiceCards";
+import { StudioCards } from "../components/panels/StudioCards";
+import { WorksPanel } from "../components/panels/Works";
 import { useLanguage } from "../providers/language_provider";
 
 const Home = () => {
@@ -10,6 +15,10 @@ const Home = () => {
             <Hero />
             <Services />
             <Studio />
+            <Works />
+            <Reviews />
+            <Pricing />
+            <Contact />
         </div>
     )
 };
@@ -23,12 +32,12 @@ const Hero = () => {
             <h1>{content.heroSubtitle}</h1>
         </div>
     )
-}
+};
 
 const Services = () => {
     return (
-        <div className="mt-64" id="services">
-            <h1>Services</h1>
+        <div id="services">
+            <ServiceCards />
             <div className="flex justify-center items-center">
                 <CheckCards />
             </div>
@@ -38,9 +47,40 @@ const Services = () => {
 
 const Studio = () => {
     return (
-        <div className="mt-64" id="studio">
-            <h1>Studio</h1>
+        <div id="studio">
             <StudioCards />
+        </div>
+    )
+};
+
+const Works = () => {
+    return (
+        <div className="mt-12" id="works">
+            <WorksPanel />
+        </div>
+    )
+};
+
+const Pricing = () => {
+    return (
+        <div className="mt-12" id="pricing">
+            <PricingChart />
+        </div>
+    )
+};
+
+const Reviews = () => {
+    return (
+        <div className="mt-12" id="reviews">
+            <ReviewsPanel />
+        </div>
+    )
+};
+
+const Contact = () => {
+    return (
+        <div className="mt-12">
+            <h1>Contact</h1>
         </div>
     )
 };

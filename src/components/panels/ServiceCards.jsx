@@ -7,14 +7,14 @@ const ServicePanel = () => {
     const { content } = useLanguage();
 
     return (
-        <div className="bg-black flex flex-col items-center">
+        <div className="flex flex-col items-center">
             <div className="my-32 w-full my-2">
                 <ServiceCardLeft text={content.serviceContent1} />
             </div>
             <div className="mb-32 w-full flex justify-end my-2">
                 <ServiceCardRight text={content.serviceContent2} />
             </div>
-            <div className="mb-32 w-full flex justify-start my-2">
+            <div className="mb-12 w-full flex justify-start my-2">
                 <ServiceCardLeft text={content.serviceContent3} />
             </div>
         </div>

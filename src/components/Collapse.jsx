@@ -8,7 +8,7 @@ import { usePricing } from '../providers/Pricing_provider';
 export const CollapsePricing = () => {
     const { setSelection, setPrice, setTrackNumber, setStemNumber, setProvisionalPrice } = usePricing();
     const { content } = useLanguage();
-    const [activeKey, setActiveKey] = useState(['1']);
+    const [activeKey, setActiveKey] = useState([]);
     const getItems = (panelStyle) => [
         {
             key: '1',
@@ -47,7 +47,6 @@ export const CollapsePricing = () => {
             <h1 className="text-6xl font-alegreya">Tarifas</h1>
             <Collapse
                 bordered={true}
-                defaultActiveKey={['1']}
                 activeKey={activeKey}
                 expandIcon={({ isActive }) => <CaretRightOutlined rotate={isActive ? 90 : 0} />}
                 style={{

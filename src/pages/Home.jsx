@@ -47,7 +47,7 @@ const Hero = () => {
 
 const Services = () => {
     return (
-        <div id="services">
+        <div className="bg-gradient-to-b from-black from-70% via-gray-500 via-90%" id="services">
             <ServicePanel />
             <div className="flex justify-center items-center">
                 <CheckCards />
@@ -66,7 +66,7 @@ const Studio = () => {
 
 const Works = () => {
     return (
-        <div id="works">
+        <div className="" id="works">
             <WorksPanel />
         </div>
     )

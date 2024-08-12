@@ -35,4 +35,18 @@ export const reviews = [
         review: "Simplemente increíble, el mejor estudio con el que he trabajado.",
         work: yourgoal,
     },
+    {
+        name: "cta",
+        rol: "writeReviewSubtitle",
+        stars: 5,
+        review: "writeReview",
+        work: yourgoal,
+    },
+    {
+        name: "Jaime Alonso García-Amorena",
+        rol: "Compositor",
+        stars: 5,
+        review: "Ya he realizado tres proyectos con El Boske Mixing Studio y siempre ha sido genial. Entrega rápida, gran calidad y un trato muy profesional. Seguiré trabajando con ellos, seguro.",
+        work: hashiban,
+    },
 ];

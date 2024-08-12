@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, message } from 'antd';
 import { useLanguage } from '../providers/language_provider';
 import { ServiceContent } from './ServicesPricing';
-import { NumberSelection } from './NumberSelection';
+import { NumberSelection, NumberSelectionNumber, NumberSelectionSelect } from './NumberSelection';
 import { usePricing } from '../providers/Pricing_provider';
 
 const StepSwitch = ({ setActiveKey }) => {
@@ -32,13 +32,13 @@ const StepSwitch = ({ setActiveKey }) => {
     return (
         <>
             <h1 className='pl-12 text-xl text-left font-bold'>{content.trackNumber}</h1>
-            <NumberSelection value={trackNumber} setter={setTrackNumber} price={getTrackPrice} options={tracks} />
+            <NumberSelectionNumber value={trackNumber} setter={setTrackNumber} price={getTrackPrice} options={tracks} />
             <h1 className='pl-12 text-xl text-left font-bold'>{content.servicesTitle}</h1>
             <ServiceContent question="productionContent1" service="productionContent2" step="production" current={0} setProvisionalPrice={setProvisionalPrice} selection={selection} setSelection={setSelection} setCanBeFinished={setCanBeFinished} />
             <ServiceContent question="mixingContent1" service="mixingContent2" step="mixing" current={1} setProvisionalPrice={setProvisionalPrice} selection={selection} setSelection={setSelection}  setCanBeFinished={setCanBeFinished} />
             <ServiceContent question="masteringContent1" service="masteringContent2" step="mastering" current={2} setProvisionalPrice={setProvisionalPrice} selection={selection} setSelection={setSelection}  setCanBeFinished={setCanBeFinished} />,
             <h1 className='pl-12 text-xl text-left font-bold'>{content.stemNumber}</h1>
-            <NumberSelection value={stemNumber} price={getTrackPrice} setter={setStemNumber} options={stems} />
+            <NumberSelectionSelect value={stemNumber} price={getTrackPrice} setter={setStemNumber} options={stems} />
             <div className='ml-12 mt-8'>
                 <Button type="primary" disabled={canBeFinished} onClick={handleClick}>
                     {content.buttonFinish}

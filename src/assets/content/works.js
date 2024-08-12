@@ -46,6 +46,6 @@ export const works = [
     {
         name: "",
         artist: "",
-        cover: cta,
+        cover: "cta",
     },
 ];

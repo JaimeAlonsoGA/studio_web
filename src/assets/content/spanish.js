@@ -11,6 +11,10 @@ const spanish = {
     serviceCard2: "Mezcla",
     serviceCard3: "Masterización",
 
+    serviceContent1: "La producción musical en otras formas.",
+    serviceContent2: "“la mezcla musical que ofrece El Boske llevará tu proyecto musical al siguiente nivel.”",
+    serviceContent3: "“la masterización musical que ofrece El Boske llevará tu proyecto musical al siguiente nivel.”",
+
     checkCard1: "Online",
     checkCard2: "Profesional",
     checkCard3: "Revisiones",
@@ -36,14 +40,22 @@ const spanish = {
     buttonNext: "Siguiente",
     buttonPrev: "Anterior",
 
+    servicesTitle: "Servicios",
+    trackNumber: "Número de obras",
+    stemNumber: "Número de pistas",
+
     productionContent1: "¿Tú proyecto necesita producción?",
     productionContent2: "Arreglos, instrumentos y voces extra, diseño de sonido o efectos creativos.",
 
     mixingContent1: "¿Tú proyecto necesita mezcla?",
     mixingContent2: "Balance, ecualización, compresión, efectos y panoramización.",
-    
+
     masteringContent1: "¿Tú proyecto necesita masterización?",
     masteringContent2: "Ajustes finales, ecualización, compresión, limitación y metadatos.",
-}
+
+    makeYourPricing: "Crea un Presupuesto",
+
+    contact: "Contacto",
+};
 
 export default spanish;

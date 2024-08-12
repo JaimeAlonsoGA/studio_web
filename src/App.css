@@ -2,6 +2,17 @@
   text-align: center;
 }
 
+.ant-collapse-header-text {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.hero-background {
+  background-image: url('./assets/images/studio1.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -32,7 +43,13 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
-  }
+  }  
+}
+
+@font-face {
+  font-family: "caprice";
+  src: local("caprice.medium"), url("./assets/fonts/caprice.medium.ttf") format("truetype");
 }

@@ -1,12 +1,17 @@
 
 import { CheckCards } from "../components/panels/CheckCards";
+import { ContactPanel } from "../components/panels/Contact";
 import { Header } from "../components/panels/Header";
-import { PricingChart } from "../components/panels/Pricing";
 import { ReviewsPanel } from "../components/panels/Reviews";
-import { ServiceCards } from "../components/panels/ServiceCards";
 import { StudioCards } from "../components/panels/StudioCards";
 import { WorksPanel } from "../components/panels/Works";
 import { useLanguage } from "../providers/language_provider";
+import { CollapsePricing } from "../components/Collapse";
+import { PricingCard } from "../components/PricingCard";
+import { usePricing } from "../providers/Pricing_provider";
+import { Button } from "antd";
+import ServicePanel from "../components/panels/ServiceCards";
+import { FooterPanel } from "../components/panels/Footer";
 
 const Home = () => {
     return (
@@ -14,11 +19,12 @@ const Home = () => {
             <Header />
             <Hero />
             <Services />
-            <Studio />
+            {/* <Studio /> */}
             <Works />
             <Reviews />
             <Pricing />
             <Contact />
+            <Footer />
         </div>
     )
 };
@@ -27,9 +33,14 @@ const Hero = () => {
     const { content } = useLanguage();
 
     return (
-        <div className="h-screen flex flex-col items-center justify-center">
-            <h1 className="text-6xl font-alegreya">{content.heroTitle}</h1>
+        <div className="text-white font-bold h-screen flex flex-col justify-center hero-background">
+            <h1 className="ml-12 mt-64 text-6xl font-alegreya">{content.heroTitle}</h1>
             <h1>{content.heroSubtitle}</h1>
+            <div>
+                <Button type="primary">
+                    {content.contact}
+                </Button>
+            </div>
         </div>
     )
 };
@@ -37,7 +48,7 @@ const Hero = () => {
 const Services = () => {
     return (
         <div id="services">
-            <ServiceCards />
+            <ServicePanel />
             <div className="flex justify-center items-center">
                 <CheckCards />
             </div>
@@ -55,16 +66,8 @@ const Studio = () => {
 
 const Works = () => {
     return (
-        <div className="mt-12" id="works">
+        <div id="works">
             <WorksPanel />
-        </div>
-    )
-};
-
-const Pricing = () => {
-    return (
-        <div className="mt-12" id="pricing">
-            <PricingChart />
         </div>
     )
 };
@@ -77,10 +80,28 @@ const Reviews = () => {
     )
 };
 
+const Pricing = () => {
+    const { isFinished } = usePricing();
+    return (
+        <div className="mt-12" id="pricing">
+            <CollapsePricing />
+            {isFinished && <PricingCard />}
+        </div>
+    )
+};
+
 const Contact = () => {
     return (
         <div className="mt-12">
-            <h1>Contact</h1>
+            <ContactPanel />
+        </div>
+    )
+};
+
+const Footer = () => {
+    return (
+        <div>
+            <FooterPanel />
         </div>
     )
 };

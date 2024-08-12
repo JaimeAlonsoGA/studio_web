@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         alegreya: ['Alegreya'],
+        caprice: ['Caprice'],
       },
     },
   },

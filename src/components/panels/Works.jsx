@@ -20,10 +20,10 @@ export const WorksPanel = () => {
 
 const WorkCard = ({ name, artist, cover }) => {
     return (
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center py-4">
             <img src={cover} alt={name} className="w-72" />
-            <h1 className="text-2xl font-alegreya font-medium">{name}</h1>
-            <h2 className="font-alegreya">{artist}</h2>
+            <h1 className="text-xl font-bold">{name}</h1>
+            <h2>{artist}</h2>
         </div>
     );
 };

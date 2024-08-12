@@ -21,7 +21,7 @@ export const ReviewsPanel = () => {
 const Review = ({ name, rol, stars, review, work }) => {
     return (
         <div className="border-4 rounded-md p-4 min-h-72">
-            <div className="flex flex-row text-center w-full h-1/3">
+            <div className="flex flex-row w-full h-1/3">
                 <div className="w-2/3">
                     <h1 className="font-bold">{name}</h1>
                     <h2>{rol}</h2>

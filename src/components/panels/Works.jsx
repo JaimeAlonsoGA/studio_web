@@ -21,18 +21,15 @@ export const WorksPanel = () => {
 
 const WorkCard = ({ name, artist, cover }) => {
     return (
-        <div className="flex flex-col items-center p-2">
+        <div className="flex flex-col justify-center items-center p-2">
             {cover === "cta" ? <Cta /> : <img src={cover} alt={name} className="w-72" />}
-            {/* <h1 className="text-xl font-bold">{name}</h1>
-            <h2>{artist}</h2> */}
-
         </div>
     );
 };
 
 const Cta = () => {
     return (
-        <div className="w-72 h-72 border-dashed border-2 flex flex-col items-center justify-center">
+        <div className="w-full max-w-72 h-full border-dashed border-2 flex flex-col items-center justify-center">
             <h1 className="text-gray-400">AQUÍ VAS TÚ</h1>
             <Button type="primary" className="font-bold p-4">
                 Contactar

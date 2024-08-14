@@ -44,7 +44,6 @@ export const CollapsePricing = () => {
 
     return (
         <div className='flex flex-col items-center justify-center'>
-            <h1 className="text-6xl font-alegreya">Tarifas</h1>
             <Collapse
                 bordered={true}
                 activeKey={activeKey}

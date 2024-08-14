@@ -2,13 +2,13 @@
   text-align: center;
 }
 
-.ant-collapse-header-text {
+/* .ant-collapse-header-text {
   font-size: 16px;
   font-weight: bold;
-}
+} */
 
 .hero-background {
-  background-image: url('./assets/images/studio1.jpg');
+  background-image: url('./assets/images/boskestudio1.webp');
   background-size: cover;
   background-position: center;
 }

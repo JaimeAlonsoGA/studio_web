@@ -1,19 +1,31 @@
 const spanish = {
-    headerButton1: "Servicios",
-    headerButton2: "El Estudio",
-    headerButton3: "Trabajos",
+    headerButton1: "Inicio",
+    headerButton2: "Tarifas",
+    headerButton3: "Catálogo",
     headerButton4: "Contacto",
 
-    heroTitle: "Tu estudio de mezlca",
-    heroSubtitle: "Producción, Mezcla y Masterización a tu alcance",
+    heroTitle: "ESTUDIO DE MEZCLA",
+    heroSubtitle: "PRODUCCIÓN, MEZCLA Y MASTERIZACIÓN A TU ALCANCE",
 
     serviceCard1: "Producción",
     serviceCard2: "Mezcla",
     serviceCard3: "Masterización",
 
     serviceContent1: "La producción musical en otras formas.",
-    serviceContent2: "“la mezcla musical que ofrece El Boske llevará tu proyecto musical al siguiente nivel.”",
-    serviceContent3: "“la masterización musical que ofrece El Boske llevará tu proyecto musical al siguiente nivel.”",
+    serviceContent2: "El sonido que necesitas para tus proyectos.",
+    serviceContent3: "Qué dicen los que ya nos conocen",
+
+    serviceSection1: "PRODUCCIÓN",
+    serviceSection2: "SONDIO",
+    serviceSection3: "MEZCLA",
+
+    sectionSubText1: "Explora sonidos con la producción musical avanzada que ofrece El Boske y todos sus servicios.",
+    sectionSubText2: "El mejor sonido para tus proyectos, con la mejor tecnología y los mejores profesionales.",
+    sectionSubText3: "Descubre lo que opinan nuestros clientes y colaboradores sobre nuestro trabajo.",
+
+    sectionButton1: "Explorar",
+    sectionButton2: "Contactar",
+    sectionButton3: "Ver más",
 
     checkCard1: "ONLINE",
     checkCard2: "PROFESIONAL",
@@ -56,7 +68,14 @@ const spanish = {
 
     makeYourPricing: "CREA TU PRESUPUESTO",
 
+    pricing: "Tarifas",
+    pricingDiscount: "Condiciones de descuentos:",
+    pricingDiscount1: "Si tu proyecto es muy sencillo (solista, dúo, trío)",
+    pricingDiscount2: "Si es una grabación en directo",
+    pricingDiscount3: "Si es un solo single con mezcla, masterización gratis",
+
     contact: "Contacto",
+    toContact: "Contactar",
 };
 
 export default spanish;

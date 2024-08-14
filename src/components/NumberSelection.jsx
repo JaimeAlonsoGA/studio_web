@@ -18,7 +18,7 @@ export const NumberSelectionSelect = ({ price, value, setter, options }) => {
     );
 };
 
-export const NumberSelectionNumber = ({ price, value, setter }) => {
+export const NumberSelectionNumber = ({ value, setter }) => {
     // const marks = {
     //     1: {
     //         label: <strong>-0%</strong>,
@@ -38,7 +38,7 @@ export const NumberSelectionNumber = ({ price, value, setter }) => {
         <div className='mx-12 py-4'>
             <Row>
                 <Col span={12}>
-                    <Slider value={value} step={1} defaultValue={1} min={1} max={15} />
+                    <Slider value={value} step={1} defaultValue={1} min={1} max={15} onChange={setter}  />
                 </Col>
                 <Col span={4}>
                     <InputNumber

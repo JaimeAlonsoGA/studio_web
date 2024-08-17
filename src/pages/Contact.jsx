@@ -1,33 +1,48 @@
 import { InfoCircleOutlined, UserOutlined, MailOutlined } from '@ant-design/icons';
-import { Button, Form, Input, Tooltip } from 'antd';
+import { Form, Input, Spin, Tooltip } from 'antd';
 import { useLanguage } from '../providers/language_provider';
 import { Container } from '../components/Container';
+import { ButtonDefault } from '../components/Button';
+import sendEmail from '../providers/emailJS';
+import { EmailSuccess } from '../components/Succesfully';
+import { usePricing } from '../providers/Pricing_provider';
+import { useState } from 'react';
 
 export const ContactPanel = () => {
     const { content } = useLanguage();
+    const { isFinished, setIsFinished } = usePricing();
+
     return (
         <Container>
             <div>
-                <div className="flex flex-col items-center justify-center">
-                    <h1 className="mt-32 text-6xl font-alegreya">{content.contact}</h1>
-                    <ContactForm />
-                    <div>
-                        <ContactButtonCard text='+34 684332575' />
-                        <ContactButtonCard text='elboskestudio@gmail.com' />
-                    </div>
+                <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-40% from-black to-gray-500">
+                    {/* <h1 className="mt-32 text-6xl font-alegreya text-white">{content.contact}</h1> */}
+                    {!isFinished && <ContactStep setIsFinished={setIsFinished} isFinished={isFinished} />}
+                    {isFinished && <SuccessStep />}
                 </div>
             </div>
         </Container>
     );
 };
 
-const onFinish = (values) => {
-    console.log(values);
-};
+const ContactStep = ({ setIsFinished, isFinished }) => (
+    <div className='px-32 py-12 rounded-lg bg-white flex flex-col items-center w-full max-w-4xl'>
+        <ContactForm setIsFinished={setIsFinished} isFinished={isFinished} />
+        {/* <div>
+            <ContactButtonCard text='+34 684332575' />
+            <ContactButtonCard text='elboskestudio@gmail.com' />
+        </div> */}
+    </div>
+);
 
-/* eslint-disable no-template-curly-in-string */
+const SuccessStep = () => (
+    <div className='px-32 py-12 rounded-lg bg-white flex flex-col items-center w-full max-w-4xl'>
+        <EmailSuccess />
+    </div>
+)
+
 const validateMessages = {
-    required: '${label} is required!',
+    required: 'Es obligatorio completar este campo',
     types: {
         email: '${label} is not a valid email!',
         number: '${label} is not a valid number!',
@@ -37,85 +52,95 @@ const validateMessages = {
     },
 };
 
-const ContactForm = () => (
-    <div className='w-full max-w-4xl mt-12'>
-        <Form
-            name="nest-messages"
-            onFinish={onFinish}
-            validateMessages={validateMessages}
-        >
-            <Form.Item
-                name="nombre"
-            // rules={[
-            //     {
-            //         required: true,
-            //         message: 'Please input your name!',
-            //     },
-            // ]}
+const ContactForm = ({ setIsFinished, isFinished }) => {
+    const [loading, setLoading] = useState(false);
+    const submit = (e) => {
+        {
+            setLoading(true); sendEmail(e).then(_ => {
+                setLoading(false);
+                setIsFinished(true);
+            }
+            )
+        }
+    }
+    
+    const { content } = useLanguage();
+    return (
+        <div className='w-full max-w-4xl mt-12'>
+            <Form
+                name="contact"
+                onFinish={submit}
+                validateMessages={validateMessages}
             >
-                <Input
-                    placeholder="Nombre"
-                    prefix={
-                        <UserOutlined
-                            style={{
-                                color: 'rgba(0,0,0,.25)',
-                            }}
-                        />
-                    }
-                    suffix={
-                        <Tooltip title="Extra information">
-                            <InfoCircleOutlined
+                <Form.Item
+                    name="to_name"
+                    rules={[
+                        {
+                            required: true,
+                        },
+                    ]}
+                >
+                    <Input
+                        placeholder="Nombre"
+                        prefix={
+                            <UserOutlined
                                 style={{
-                                    color: 'rgba(0,0,0,.45)',
+                                    color: 'rgba(0,0,0,.25)',
                                 }}
                             />
-                        </Tooltip>
-                    }
-                />
-            </Form.Item>
-            <Form.Item
-                name={['user', 'email']}
-                rules={[
-                    {
-                        type: 'email',
-                    },
-                ]}
-            >
-                <Input
-                    placeholder="Email"
-                    prefix={
-                        <MailOutlined
-                            style={{
-                                color: 'rgba(0,0,0,.25)',
-                            }}
-                        />
-                    }
-                />
-            </Form.Item>
-            {/* <Form.Item
-            >
-                <Button type="dashed" htmlType="submit">
-                    Prespuesto +
-                </Button>
-            </Form.Item> */}
-            <Form.Item name={['user', 'introduction']}>
-                <Input.TextArea
-                    placeholder='Explícanos tu proyecto!' />
-            </Form.Item>
-            <div className='flex justify-center'>
-                <Form.Item
-                >
-                    <Button type="primary" htmlType="submit">
-                        Contactar
-                    </Button>
+                        }
+                        suffix={
+                            <Tooltip title="Como quieres que te llamemos">
+                                <InfoCircleOutlined
+                                    style={{
+                                        color: 'rgba(0,0,0,.45)',
+                                    }}
+                                />
+                            </Tooltip>
+                        }
+                    />
                 </Form.Item>
-            </div>
-        </Form>
-    </div >
-);
+                <Form.Item
+                    name='email'
+                    rules={[
+                        {
+                            type: 'email',
+                            required: true,
+                        },
+                    ]}
+                >
+                    <Input
+                        placeholder="Email"
+                        prefix={
+                            <MailOutlined
+                                style={{
+                                    color: 'rgba(0,0,0,.25)',
+                                }}
+                            />
+                        }
+                    />
+                </Form.Item>
+                <Form.Item name='project'
+                    rules={[
+                        {
+                            required: true,
+                        },
+                    ]}>
+                    <Input.TextArea
+                        placeholder='¡Explícanos tu proyecto!' />
+                </Form.Item>
+                <div className='flex justify-center'>
+                    <Form.Item
+                    >
+                        {!loading && <ButtonDefault htmlType="submit" text={content.toContact} />}
+                        {loading && <Spin />}
+                    </Form.Item>
+                </div>
+            </Form>
+        </div >
+    );
+};
 
 const ContactButtonCard = ({ text }) => (
-    <Button type='default' className='mx-4'>
-        {text}
-    </Button>
+    <ButtonDefault text={text} button_style={"mx-12"} type="default" />
 )

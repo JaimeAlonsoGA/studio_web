@@ -9,8 +9,8 @@ export const Header = () => {
     const [isMobileHeaderOpen, setIsMobileHeaderOpen] = useState(false);
 
     return (
-        <div className="flex flex-col items-center justify-center fixed w-full z-10">
-            <div className="flex items-center mt-4 border-2 w-11/12 rounded-md shadow-md justify-between px-4 bg-white">
+        <div className="flex flex-col items-center mjustify-center fixed w-full z-50">
+            <div className="flex items-center w-full shadow-md justify-between px-4 bg-white">
                 <Title />
                 <HeaderButtons setIsMobileHeaderOpen={setIsMobileHeaderOpen} />
                 <HeaderButtonsMobile isMobileHeaderOpen={isMobileHeaderOpen} setIsMobileHeaderOpen={setIsMobileHeaderOpen} />
@@ -25,9 +25,11 @@ const HeaderButtons = ({ setIsMobileHeaderOpen }) => {
     return (
         <div className="flex flex-row items-center hidden lg:flex">
             <HeaderButton text={content.headerButton1} to="/" setIsMobileHeaderOpen={setIsMobileHeaderOpen} />
+            <HeaderButton text={content.headerButton6} to="/services" setIsMobileHeaderOpen={setIsMobileHeaderOpen} />
+            <HeaderButton text={content.headerButton3} to="/catalogue" setIsMobileHeaderOpen={setIsMobileHeaderOpen} />
             <HeaderButton text={content.headerButton2} to="/pricing" setIsMobileHeaderOpen={setIsMobileHeaderOpen} />
-            <HeaderButton text={content.headerButton3} to="/people" setIsMobileHeaderOpen={setIsMobileHeaderOpen} />
-            <HeaderButton text={content.headerButton4} to="/contact" setIsMobileHeaderOpen={setIsMobileHeaderOpen} />
+            <HeaderButton text={content.headerButton4} to="/reviews" setIsMobileHeaderOpen={setIsMobileHeaderOpen} />
+            <HeaderButton text={content.headerButton5} to="/contact" setIsMobileHeaderOpen={setIsMobileHeaderOpen} />
             <img src={icon} alt="icon" className="w-14" />
         </div>
     )
@@ -48,7 +50,7 @@ const HeaderButton = ({ text, targetId, setIsMobileHeaderOpen, to }) => {
             <button onClick={() => {
                 navigate(to);
             }}
-                className="font-bold font-caprice bg-gradient-to-r from-black via-green-900 to-gray-600 bg-clip-text text-transparent text-2xl hover:bg-gradient-to-r hover:from-blue-600 hover:to-red-500 hover:bg-clip-text hover:text-transparent px-4">{text}</button>
+                className="font-bold font-caprice font-black text-2xl hover:bg-gradient-to-r hover:from-blue-600 hover:to-red-500 hover:bg-clip-text hover:text-transparent px-4">{text}</button>
         </div>
     )
 };
@@ -56,7 +58,7 @@ const HeaderButton = ({ text, targetId, setIsMobileHeaderOpen, to }) => {
 const HeaderButtonsMobile = ({ isMobileHeaderOpen, setIsMobileHeaderOpen }) => {
 
     return (
-        <button onClick={() => setIsMobileHeaderOpen(!isMobileHeaderOpen)} className="lg:hidden mx-4">
+        <button onClick={() => setIsMobileHeaderOpen(!isMobileHeaderOpen)} className="lg:hidden mx-2">
             <LuMenu size={32} />
         </button>
     )
@@ -66,11 +68,14 @@ const HeaderMobile = ({ setIsMobileHeaderOpen }) => {
     const { content } = useLanguage();
     return (
         <div className="mt-1 flex flex-col items-center rounded-lg lg:hidden bg-white">
-            <HeaderButton text={content.headerButton1} targetId="services" setIsMobileHeaderOpen={setIsMobileHeaderOpen} />
-            <HeaderButton text={content.headerButton2} targetId="studio" setIsMobileHeaderOpen={setIsMobileHeaderOpen} />
-            <HeaderButton text={content.headerButton3} targetId="works" setIsMobileHeaderOpen={setIsMobileHeaderOpen} />
-            <HeaderButton text={content.headerButton4} targetId="contact" setIsMobileHeaderOpen={setIsMobileHeaderOpen} />
+            <HeaderButton text={content.headerButton1} to="/" setIsMobileHeaderOpen={setIsMobileHeaderOpen} />
+            <HeaderButton text={content.headerButton6} to="/services" setIsMobileHeaderOpen={setIsMobileHeaderOpen} />
+            <HeaderButton text={content.headerButton3} to="/catalogue" setIsMobileHeaderOpen={setIsMobileHeaderOpen} />
+            <HeaderButton text={content.headerButton2} to="/pricing" setIsMobileHeaderOpen={setIsMobileHeaderOpen} />
+            <HeaderButton text={content.headerButton4} to="/reviews" setIsMobileHeaderOpen={setIsMobileHeaderOpen} />
+            <HeaderButton text={content.headerButton5} to="/contact" setIsMobileHeaderOpen={setIsMobileHeaderOpen} />
         </div>
     )
 };
 
+//bg-gradient-to-r from-black via-40% via-green-700 to-gray-600 bg-clip-text text-transparent

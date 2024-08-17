@@ -11,9 +11,10 @@ export const PricingProvier = ({ children }) => {
     const [trackNumber, setTrackNumber] = useState(1);
     const [stemNumber, setStemNumber] = useState(1);
     const [isFinished, setIsFinished] = useState(false);
+    const [reviewFinished, setReviewFinished] = useState(false);
     const [provisionalPrice, setProvisionalPrice] = useState(1);
     return (
-        <PricingContext.Provider value={{ selection, setSelection, price, setPrice, trackNumber, setTrackNumber, stemNumber, setStemNumber, isFinished, setIsFinished, provisionalPrice, setProvisionalPrice }}>
+        <PricingContext.Provider value={{ selection, setSelection, price, setPrice, trackNumber, setTrackNumber, stemNumber, setStemNumber, isFinished, setIsFinished, provisionalPrice, setProvisionalPrice, reviewFinished, setReviewFinished }}>
             {children}
         </PricingContext.Provider>
     );

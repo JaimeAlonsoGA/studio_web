@@ -7,8 +7,7 @@ export const PricingPanel = () => {
     const { content } = useLanguage();
     return (
         <Container>
-            <div className="flex flex-col items-center justify-center">
-                <h1 className="mt-32 text-6xl font-alegreya mb-12">{content.pricing}</h1>
+            <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-40% from-black to-gray-500 pb-32">
                 <PricingTable />
             </div>
         </Container>

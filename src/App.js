@@ -5,6 +5,10 @@ import { LanguageProvider } from "./providers/language_provider";
 import { PricingPanel } from "./pages/Pricing";
 import { PricingProvier } from "./providers/Pricing_provider";
 import { ContactPanel } from "./pages/Contact";
+import { Catalogue } from "./pages/Catalogue";
+import { Review } from "./pages/Review";
+import { WriteReview } from "./pages/WriteReview";
+import { ServicesPage } from "./pages/Services";
 
 const App = () => {
   return (
@@ -24,6 +28,10 @@ const AppRoutes = () => {
       <Route path="/*" element={<Home />} />
       <Route path="/pricing" element={<PricingPanel />} />
       <Route path="/contact" element={<ContactPanel />} />
+      <Route path="/catalogue" element={<Catalogue />} />
+      <Route path="/reviews" element={<Review />} />
+      <Route path="/services" element={<ServicesPage />} />
+      <Route path="/reviews/write/:postId" element={<WriteReview />} />
     </Routes>
   );
 };

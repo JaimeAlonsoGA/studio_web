@@ -1,5 +1,7 @@
 import { Button, Collapse, Table } from 'antd';
 import { useLanguage } from '../providers/language_provider';
+import { ButtonDefault } from './Button';
+import { useMediaQuery } from 'react-responsive';
 
 const TagPrice = ({ price }) => (
     <div className='flex justify-center'>
@@ -11,7 +13,7 @@ const TagPrice = ({ price }) => (
 
 const FirstRow = ({ text }) => (
     <div hoverable className='font-bold'>
-        <Button type='dashed' className='font-bold'>{text}</Button>
+        <ButtonDefault text={text} type="dashed" to={"/services"} />
     </div>
 );
 
@@ -59,15 +61,15 @@ const data = [
         key: '1',
         trackNumber: "PRODUCCIÓN",
         single: '80 €',
-        ep: '60 €',
-        lp: '50 €',
+        ep: '80 €',
+        lp: '80 €',
     },
     {
         key: '2',
         trackNumber: "MEZCLA",
         single: '80 €',
-        ep: '60 €',
-        lp: '50 €',
+        ep: '75 €',
+        lp: '70 €',
     },
     {
         key: '3',
@@ -79,9 +81,9 @@ const data = [
     {
         key: '4',
         trackNumber: "COMPLETO",
-        single: <TagPrice price={120} />,
-        ep: <TagPrice price={100} />,
-        lp: <TagPrice price={90} />,
+        single: <TagPrice price={180} />,
+        ep: <TagPrice price={170} />,
+        lp: <TagPrice price={160} />,
         align: 'center',
     },
 ];
@@ -98,15 +100,13 @@ const FooterDropdown = () => {
 const Discounts = () => {
     const { content } = useLanguage();
     return (
-        <div className='flex flex-row'>
+        <div className='flex flex-col md:flex-row'>
             <div className='flex-grow text-justify'>
-                <h1 className='font-medium'>{content.pricingDiscount}</h1>
-                <h1>{content.pricingDiscount1}</h1>
-                <h1>{content.pricingDiscount2}</h1>
-                <h1>{content.pricingDiscount3}</h1>
+                <h1 className='font-medium tracking-wide'>{content.pricingDiscount}</h1>
+                {content.discounts.map((discount) => <h1 className='py-1 text-gray-600'>• {discount.condition}</h1>)}
             </div>
             <div className='flex justify-end items-center'>
-                <Button type='primary'>{content.toContact}</Button>
+                <ButtonDefault text={content.toContact} />
             </div>
         </div >
     );
@@ -121,13 +121,15 @@ const items = [
 ]
 
 export const PricingTable = () => {
+    const isSmScreen = useMediaQuery({ query: '(min-width: 640px)' });
     const tableProps = {
         bordered: false,
         loading: false,
         footer: defaultFooter,
+        size: isSmScreen ? "small" : "middle",
     };
     return (
-        <div className='w-full max-w-4xl'>
+        <div className='w-full max-w-4xl cursor-default pt-36'>
             <Table columns={columns} dataSource={data}
                 pagination={false}
                 {...tableProps}
@@ -137,7 +139,7 @@ export const PricingTable = () => {
 }
 
 const RowData = ({ text }) => (
-    <div className='border-l-2 border-r-2'>
+    <div>
         <h1 className='font-bold font-caprice'>{text}</h1>
     </div>
 );

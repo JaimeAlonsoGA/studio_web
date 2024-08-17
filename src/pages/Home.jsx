@@ -1,7 +1,6 @@
 
 import { CheckCards } from "../components/panels/CheckCards";
 import { ReviewsPanel } from "../components/panels/Reviews";
-import { StudioCards } from "../components/panels/StudioCards";
 import { WorksPanel } from "../components/panels/Works";
 import ServicePanel from "../components/panels/ServiceCards";
 import { Container } from "../components/Container";
@@ -10,7 +9,6 @@ import { tempWorks } from "../assets/content/works";
 import { ButtonCustom } from "../components/Button";
 import { useLanguage } from "../providers/language_provider";
 import { tempReviews } from "../assets/content/reviews";
-import { ColorDiv } from "../components/ColorDiv";
 
 const Home = () => {
     return (

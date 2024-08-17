@@ -37,14 +37,6 @@ const HeaderButtons = ({ setIsMobileHeaderOpen }) => {
 
 const HeaderButton = ({ text, targetId, setIsMobileHeaderOpen, to }) => {
     const navigate = useNavigate();
-    //     const handleClick = () => {
-    //         const targetElement = document.getElementById(targetId);
-    //         if (targetElement) {
-    //             targetElement.scrollIntoView({ behavior: 'smooth' });
-    //             console.log('scrolling to', targetId);
-    //             setIsMobileHeaderOpen(false);
-    //         }
-    // };
     return (
         <div>
             <button onClick={() => {

@@ -3,7 +3,6 @@ import { useLanguage } from "../../providers/language_provider";
 import { useState } from "react";
 
 export const WorksPanel = ({ works }) => {
-    const { content } = useLanguage();
     return (
         <div className="mt-6 md:mt-0 pb-12 flex flex-col text-center">
             <div className="flex grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 justify-around md:mx-6 p-2">

@@ -13,7 +13,7 @@ export const CheckCards = () => {
     const { content } = useLanguage();
     return (
         <div className="w-full md:py-16 items-center justify-center">
-            <div className="md:flex md:flex-row grid grid-cols-2 items-center justify-around">
+            <div className="2xl:flex 2xl:flex-row grid grid-cols-2 items-center justify-around">
                 {checkCardList.map((card, index) => (
                     <div className="md:flex-1 p-4 md:p-16">
                         <CheckCard {...card} title={content[card.title]} subtitle={card.subtitle} index={index} />
@@ -27,7 +27,7 @@ export const CheckCards = () => {
 const CheckCard = ({ Icon, title, subtitle, to, badge }) => {
     const [isShowCertified, setIsShowCertified] = useState(false);
     if (badge === true && !isShowCertified) return (
-        <Badge.Ribbon text="Click para ver">
+        <Badge.Ribbon text="Presiona para ver">
             <Card hoverable className="static" onClick={() => setIsShowCertified(!isShowCertified)}>
                 {isShowCertified && to &&
                     <motion.img

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Button } from "antd";
 import { useLanguage } from "../../providers/language_provider";
 import { ButtonDefault } from "../Button";
 
@@ -10,7 +9,7 @@ export const HeroPanel = () => {
     useEffect(() => {
         const handleScroll = () => {
             const scrollTop = window.scrollY;
-            const maxScroll = 500;
+            const maxScroll = 300;
             const newOpacity = Math.max(1 - scrollTop / maxScroll, 0);
             setOpacity(newOpacity);
         };
@@ -43,15 +42,3 @@ export const HeroPanel = () => {
         </div>
     );
 };
-
-//bg-gradient-to-r from-green-400 via-red-500 to-yellow-300
-
-
-{/* <div className="flex flex-col items-center">
-    <h1 className="tracking-wide mt-4 text-6xl font-bold font-caprice bg-gradient-to-r from-blue-600 via-40% via-green-400 to-70% to-yellow-500 bg-clip-text text-transparent">
-        {content.heroTitle}
-    </h1>
-    <h1 className="font-bold mt-4 text-white text-2xl tracking-wide">
-        {content.heroSubtitle}
-    </h1>
-</div> */}

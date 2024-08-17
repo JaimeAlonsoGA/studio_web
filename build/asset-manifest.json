@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a077d522.css",
+    "main.js": "/static/js/main.3231f21a.js",
+    "static/js/453.2851411b.chunk.js": "/static/js/453.2851411b.chunk.js",
+    "static/media/hashiban.png": "/static/media/hashiban.92caf164e5b05e9cf89e.png",
+    "static/media/boskestudio1.webp": "/static/media/boskestudio1.195889c6a5a848c61989.webp",
+    "static/media/instrus2.webp": "/static/media/instrus2.98afe765015523b0ac36.webp",
+    "static/media/verdadesymentiras.jpg": "/static/media/verdadesymentiras.6b09b5db925d11476229.jpg",
+    "static/media/veintiuno.jpg": "/static/media/veintiuno.8e869170956e58442434.jpg",
+    "static/media/altavozReves2.webp": "/static/media/altavozReves2.61a74e1402a9dd63cb41.webp",
+    "static/media/drakkar.jpg": "/static/media/drakkar.135b26e5a734bada53b2.jpg",
+    "static/media/dope.jpg": "/static/media/dope.839b4152d1eabf3da9f4.jpg",
+    "static/media/estaclaro.jpg": "/static/media/estaclaro.a4adf198cf2f8ccb3682.jpg",
+    "static/media/yourgoal.jpg": "/static/media/yourgoal.a83ce436401831254819.jpg",
+    "static/media/abbey.webp": "/static/media/abbey.dbb1bec0c62815358c52.webp",
+    "static/media/mezclaRev.webp": "/static/media/mezclaRev.d5201615cde1c6476628.webp",
+    "static/media/caprice.medium.ttf": "/static/media/caprice.medium.948a25f4cb1af29e01c9.ttf",
+    "static/media/logo.webp": "/static/media/logo.24efcefbcd876f442144.webp",
+    "static/media/icon.png": "/static/media/icon.8172bfd80416c534933d.png",
+    "index.html": "/index.html",
+    "main.a077d522.css.map": "/static/css/main.a077d522.css.map",
+    "main.3231f21a.js.map": "/static/js/main.3231f21a.js.map",
+    "453.2851411b.chunk.js.map": "/static/js/453.2851411b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a077d522.css",
+    "static/js/main.3231f21a.js"
+  ]
+}

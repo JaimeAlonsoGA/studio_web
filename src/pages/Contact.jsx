@@ -36,7 +36,7 @@ const ContactStep = ({ setIsFinished, isFinished }) => (
 );
 
 const SuccessStep = () => (
-    <div className='px-32 py-12 rounded-lg bg-white flex flex-col items-center w-full max-w-4xl'>
+    <div className='px-32 mt-10 py-12 rounded-lg bg-white flex flex-col items-center w-full max-w-4xl'>
         <EmailSuccess />
     </div>
 )
@@ -66,7 +66,7 @@ const ContactForm = ({ setIsFinished, isFinished }) => {
     
     const { content } = useLanguage();
     return (
-        <div className='w-full max-w-4xl mt-12'>
+        <div className='min-w-64 w-full max-w-4xl mt-12'>
             <Form
                 name="contact"
                 onFinish={submit}

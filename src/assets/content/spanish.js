@@ -17,7 +17,7 @@ const spanish = {
     serviceContent2: "Tratado, Cuidado, Refinado. El mejor sonido disponible ahora.",
     serviceContent3: "Tu arte lo es todo; consigue que tus oyentes lo disfruten al máximo.",
 
-    serviceSection1: "PRODUCCIÓN",
+    serviceSection1: "TARIFAS",
     serviceSection2: "SONIDO",
     serviceSection3: "CATÁLOGO",
 
@@ -25,7 +25,7 @@ const spanish = {
     
     serviceOther: "* Para otros servicios (grabación, beatmaking, composición...etc) consultar directamente.",
 
-    sectionSubText1: "Accede a producción, mezcla y masterización musical sin romper tu cerdito de los ahorros ni comprometer tu sonido.",
+    sectionSubText1: "¿Tienes una canción grabada pero no suena como te imaginas? Accede a producción, mezcla y masterización musical de la mejor calidad a un precio inigualable.",
     sectionSubText2: "Un estudio cargado de la tecnología más puntera y mejoras para el sonido dirigido por Jaime Alonso, ingeniero de sonido por Abbey Road, para darte lo mejor.",
     sectionSubText3: "¿Tienes una banda, haces música electrónica, eres un cantautor, un rapero? Descubre que no hubo límites para los artistas que ya han pasado por aquí.",
 
@@ -96,6 +96,12 @@ const spanish = {
             s: "balance"
         },
         {
+            s: "ajuste de tempo"
+        },
+        {
+            s: "correción de tono"
+        },
+        {
             s: "ecualización"
         },
         {
@@ -114,14 +120,8 @@ const spanish = {
             s: "automatizaciones"
         },
         {
-            s: "reemplazo de kit de bateria"
+            s: "ajuste de sonido de bateria (samples y kits)"
         },
-        {
-            s: "ajuste de tempo"
-        },
-        {
-            s: "correción de tono"
-        }
     ],
 
     // masteringContent1: "¿Tú proyecto necesita MASTERIZACIÓN?",

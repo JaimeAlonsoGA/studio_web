@@ -17,7 +17,7 @@ export const WriteReview = () => {
     return (
         <Container>
             <div>
-                <div className="h-screen flex flex-col items-center justify-center bg-gradient-to-b from-40% from-black to-gray-500">
+                <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-40% from-black to-gray-500">
                     {!reviewFinished && <WriteStep setReviewFinished={setReviewFinished} postId={postId} />}
                     {reviewFinished && <SuccessStep />}
                 </div>
@@ -33,7 +33,7 @@ const WriteStep = ({ setReviewFinished, postId }) => (
 );
 
 const SuccessStep = () => (
-    <div className='px-32 py-12 mt-14 rounded-lg bg-white flex flex-col items-center w-full max-w-4xl'>
+    <div className='px-32 mt-10 py-12 rounded-lg bg-white flex flex-col items-center w-full max-w-4xl'>
         <ReviewSuccess />
     </div>
 );
@@ -76,7 +76,7 @@ const WriteForm = ({ setReviewFinished, postId }) => {
     const imageSrc = getImageByPostId(postId);
 
     return (
-        <div className='w-full max-w-4xl'>
+        <div className='min-w-64 w-full max-w-4xl'>
             <Form
                 name="review-form"
                 onFinish={submit}

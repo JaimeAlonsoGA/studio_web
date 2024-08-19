@@ -4,7 +4,7 @@ import drakkar from "../images/works/drakkar.jpg";
 import veintiuno from "../images/works/veintiuno.jpg";
 import verdadesymentiras from "../images/works/verdadesymentiras.jpg";
 import estaclaro from "../images/works/estaclaro.jpg";
-import hashiban from "../images/works/hashiban.png";
+import hashiban from "../images/works/hashiban.jpg";
 
 export const tempWorks = [
     {

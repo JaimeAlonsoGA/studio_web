@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.a077d522.css",
-    "main.js": "/static/js/main.3231f21a.js",
+    "main.css": "/static/css/main.8fbfa990.css",
+    "main.js": "/static/js/main.746e819a.js",
     "static/js/453.2851411b.chunk.js": "/static/js/453.2851411b.chunk.js",
-    "static/media/hashiban.png": "/static/media/hashiban.92caf164e5b05e9cf89e.png",
+    "static/media/hashiban.jpg": "/static/media/hashiban.92caf164e5b05e9cf89e.jpg",
     "static/media/boskestudio1.webp": "/static/media/boskestudio1.195889c6a5a848c61989.webp",
     "static/media/instrus2.webp": "/static/media/instrus2.98afe765015523b0ac36.webp",
     "static/media/verdadesymentiras.jpg": "/static/media/verdadesymentiras.6b09b5db925d11476229.jpg",
@@ -19,12 +19,12 @@
     "static/media/logo.webp": "/static/media/logo.24efcefbcd876f442144.webp",
     "static/media/icon.png": "/static/media/icon.8172bfd80416c534933d.png",
     "index.html": "/index.html",
-    "main.a077d522.css.map": "/static/css/main.a077d522.css.map",
-    "main.3231f21a.js.map": "/static/js/main.3231f21a.js.map",
+    "main.8fbfa990.css.map": "/static/css/main.8fbfa990.css.map",
+    "main.746e819a.js.map": "/static/js/main.746e819a.js.map",
     "453.2851411b.chunk.js.map": "/static/js/453.2851411b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a077d522.css",
-    "static/js/main.3231f21a.js"
+    "static/css/main.8fbfa990.css",
+    "static/js/main.746e819a.js"
   ]
 }

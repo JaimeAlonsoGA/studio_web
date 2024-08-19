@@ -4,7 +4,7 @@ import { ButtonDefault } from './Button';
 export const EmailSuccess = () => {
     return (
         <Result
-            className='min-h-screen'
+            className='min-w-64'
             status="success"
             title="¡Hemos recibido tu mensaje!"
             subTitle="Nos pondremos en contacto contigo en menos de 48 horas laborales. Gracias por confiar en El Boske"
@@ -18,7 +18,8 @@ export const EmailSuccess = () => {
 
 export const ReviewSuccess = () => {
     return (
-        <Result className='min-h-screen'
+        <Result
+            className='min-w-64'
             status="success"
             title="¡Hemos recibido tu reseña!"
             subTitle="Gracias por tomarte el tiempo para redactarla, pronto estará en la web. Esperamos que tu música llegue a aquellos que necesiten oirla."

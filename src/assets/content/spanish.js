@@ -22,7 +22,7 @@ const spanish = {
     serviceSection3: "CATÁLOGO",
 
     studio: "El estudio está equipado con una mesa de mezclas digital Softube Mixing System, Altavoces Focal Alpha Evo Twin, Tratamiento acústico y software de configuración acústica (Sonarworks Reference ID), instrumentos físicos y digitales, micrófonos AKG y SE Electronics, plug-ins de producción, edición, mezcla y mastering y Cubase 13 Pro",
-    
+
     serviceOther: "* Para otros servicios (grabación, beatmaking, composición...etc) consultar directamente.",
 
     sectionSubText1: "¿Tienes una canción grabada pero no suena como te imaginas? Accede a producción, mezcla y masterización musical de la mejor calidad a un precio inigualable.",
@@ -161,7 +161,7 @@ const spanish = {
             condition: "Si tu proyecto es muy sencillo (rapero, solista o dúo)",
         },
         {
-            condition: "Si tu proyecto es música “folklórica tradicional”",
+            condition: "Si tu proyecto es puramente música folklórica",
         },
         {
             condition: "Si estás trabajando en un álbum acústico",
@@ -173,7 +173,7 @@ const spanish = {
             condition: "Si tu proyecto es una versión o cover de una canción existente",
         },
         {
-            condition: "Si tu proyecto es música experimental no convencional (a juicio del estudio)",
+            condition: "Si tu proyecto es música experimental (a oidos del estudio)",
         },
         {
             condition: "Si tu proyecto es una grabación en vivo",

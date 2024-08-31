@@ -16,7 +16,7 @@ export const tempReviews = [
     //     work: logo,
     // },
     {
-    
+
         name: "Gonzalo",
 
         rol: "Fundador de Hashiban",
@@ -44,16 +44,16 @@ export const tempReviews = [
     {
 
         name: "Adrián",
-        
+
         rol: "Productor",
-        
+
         stars: 5,
-        
+
         review: "Trabajar con Jaime fue genial: fluido y comunicativo. El sonido final transmite lo que queríamos y además también puede guiar en el proceso de subirla a todas las plataformas. ¡Trabajaré con él de nuevo sin duda!",
-        
+
         work: dope,
-        
-        },
+
+    },
 ];
 
 export const reviews = [
@@ -92,14 +92,14 @@ export const reviews = [
     {
 
         name: "Adrián",
-        
+
         rol: "Productor",
-        
+
         stars: 5,
-        
+
         review: "Trabajar con Jaime fue genial: fluido y comunicativo. El sonido final transmite lo que queríamos y además también puede guiar en el proceso de subirla a todas las plataformas. ¡Trabajaré con él de nuevo sin duda!",
-        
+
         work: dope,
-        
-        },
+
+    },
 ];
